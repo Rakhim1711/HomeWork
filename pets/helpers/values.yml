@@ -1,0 +1,4 @@
+pending_url: "https://petstore.swagger.io/v2/pet/findByStatus?status=pending"
+sold_url: "https://petstore.swagger.io/v2/store/order"
+name: doggie
+pending_status: pending
