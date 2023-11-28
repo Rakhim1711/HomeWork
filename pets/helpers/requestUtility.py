@@ -32,7 +32,6 @@ dataForDeletion = {
 
 headers = {'content-type':'application/json', 'Accept':'application/json'}
 
-
 class RequestUtility(object):
 
     def __init__(self):
@@ -57,11 +56,4 @@ class RequestUtility(object):
         main_url = self.url
         raw_url = requests.get(main_url)
         return raw_url.status_code
-
-    def create_new_user(self, url, data, headers):
-        create_new_user = requests.post(url, json=data, headers=headers)
-        rs = create_new_user.content
-        raw_body = rs.decode('utf8').replace("'", '"')
-        # name = json.loads(raw_body)['username']
-        import pdb; pdb.set_trace()
 

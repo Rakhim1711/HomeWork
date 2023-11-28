@@ -16,6 +16,5 @@ def test_json_elements():
     jsonObject = JsonKeys()
     content = jsonObject.get_json_content(base_url)
     firstPeInfo = content[0]
-    print(firstPeInfo)
     assert firstPeInfo['status'] == data['pending_status']
 

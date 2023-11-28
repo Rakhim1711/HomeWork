@@ -49,10 +49,11 @@ def test_with_wrong_url():
 
 def test_create_and_delete_new_user():
     r = RequestUtility()
-    raw_response = r.create_new_user(create_user, dataForDeletion, headers=headers)
-    user_name = "Peter"
-    delete_user_name = requests.delete(create_user+user_name, json=dataForDeletion, headers=headers)
-    import pdb; pdb.set_trace()
+    raw_response = r.create_an_order(base_url, requestBody, headers=headers)
+    orderId = str(raw_response[0])
+    delete_user_name = requests.delete(base_url+'/'+ orderId)
+    assert delete_user_name.status_code == 200
+
 
 
 
